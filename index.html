@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Probal Rudra · interactive CV</title>
+
+  <!-- Google Fonts (Poppins) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS + Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <!-- AOS (animate on scroll) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- scroll progress bar (thin line at top) -->
+  <div class="progress-container">
+    <div class="progress-bar" id="scrollProgress"></div>
+  </div>
+
+  <!-- Sticky navbar with dark/light toggler -->
+  <nav class="navbar navbar-expand-lg sticky-nav py-3" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">Probal Rudra</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-center">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">Certs</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item ms-lg-3">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+              <i class="fas fa-sun"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Particle background container (fixed behind content) -->
+  <div id="particles-js" class="particles-container"></div>
+
+  <main class="content-wrapper">
+
+    <!-- Hero section -->
+    <section id="home" class="section hero-section">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5 text-center text-lg-start" data-aos="fade-right" data-aos-duration="1000">
+            <div class="profile-img-wrapper mx-auto mx-lg-0">
+              <img src="picture.jpg" alt="profile" class="profile-img">
+            </div>
+          </div>
+          <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1000">
+            <h1 class="display-4 fw-bold">Probal Rudra</h1>
+            <div class="typing-wrapper mb-3">
+              <span class="professional-title" id="typing"></span>
+            </div>
+            <p class="lead">Innovative IT Professional with 10+ years of experience building enterprise applications and intelligent automation solutions. Oracle 19c and APEX 24 certified, I leverage Power Automate, VBA, Power BI, and Node-RED to convert manual processes into streamlined, data-driven systems.</p>
+            <div class="d-flex flex-wrap gap-3 mt-4 align-items-center">
+              
+              <div class="social-icons-hero">
+                <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">About Me</h2>
+        <div class="row g-4">
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <p class="about-text">I am a dedicated IT professional with hands-on experience in software development, database management, and enterprise system solutions. I specialize in developing web and desktop applications using C#, ASP.NET, SQL Server, and Oracle technologies.</p>
+            <p class="about-text">I am certified in Oracle 19c Database Administration and Oracle APEX 24, which has strengthened my expertise in database architecture, performance optimization, and low-code enterprise application development. I have experience building approval workflow systems, IT asset management platforms, and HR/Payroll solutions tailored to organizational needs.</p>
+			<p class="about-text">I am passionate about designing secure, scalable, and efficient systems that improve business productivity and digital transformation.</p>
+          </div>
+          <div class="col-lg-5" data-aos="fade-up" data-aos-delay="200">
+            <ul class="personal-details list-unstyled">
+              <li><i class="fas fa-envelope me-3"></i> probalrudra272809@gmail.com</li>
+              <li><i class="fas fa-phone-alt me-3"></i> +8801861-272809</li>
+              <li><i class="fas fa-map-marker-alt me-3"></i> Chittagong, Bangladesh</li>
+              <li><i class="fas fa-calendar-alt me-3"></i> 19 07 1996</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills (animated progress bars) -->
+    <section id="skills" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Skills</h2>
+    <div class="row g-5">
+
+      <!-- Technical Skills -->
+      <div class="col-md-6" data-aos="fade-right">
+        <h4 class="mb-4"><i class="fas fa-database me-2"></i>Technical Skills</h4>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>C# / .NET Framework</span><span>92%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>Oracle 19c & APEX 24</span><span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>SQL Server & Database Design</span><span>88%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:88%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>Power Automate / VBA / Power Query</span><span>85%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:85%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="d-flex justify-content-between">
+            <span>Power BI & Node-RED</span><span>80%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:80%"></div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="col-md-6" data-aos="fade-left">
+        <h4 class="mb-4"><i class="fas fa-users me-2"></i>Professional Skills</h4>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>Problem Solving & Analytical Thinking</span><span>95%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:95%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>Process Automation Mindset</span><span>92%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:92%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item mb-4">
+          <div class="d-flex justify-content-between">
+            <span>Leadership & Team Coordination</span><span>90%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:90%"></div>
+          </div>
+        </div>
+
+        <div class="skill-item">
+          <div class="d-flex justify-content-between">
+            <span>Communication & Documentation</span><span>93%</span>
+          </div>
+          <div class="progress">
+            <div class="progress-bar" style="width:93%"></div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!-- Experience (timeline style) -->
+    <section id="experience" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Work Experience</h2>
+    <div class="timeline">
+
+      <!-- Current Role 1 -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2025 (Sep) – Present</div>
+        <div class="timeline-content card p-4">
+          <h4>System Development Partner & Consultant</h4>
+          <h5 class="text-primary">Padma Group of Converters · Corporate Office</h5>
+          <p>
+            Providing enterprise system development and IT consulting services. 
+            Designing workflow automation, database solutions, and business process 
+            optimization systems using Oracle, .NET, and Power Platform technologies.
+          </p>
+        </div>
+      </div>
+
+      <!-- Current Role 2 -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="150">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">Present</div>
+        <div class="timeline-content card p-4">
+          <h4>Assistant ICT Teacher</h4>
+          <h5 class="text-primary">Nazirhat Collegiate High School · Hathazari, Chittagong</h5>
+          <p>
+            Teaching Information & Communication Technology subjects, guiding students 
+            in computer fundamentals, programming basics, and digital literacy while 
+            integrating modern technology practices into classroom learning.
+          </p>
+        </div>
+      </div>
+
+      <!-- Previous Role -->
+      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">2017 – 2025 (Sep)</div>
+        <div class="timeline-content card p-4">
+          <h4>Senior IT Officer</h4>
+          <h5 class="text-primary">Padma Group of Converters · Padma Center, Dilu Road, Mogbazar, Dhaka</h5>
+          <p>
+            Led IT operations and enterprise system development initiatives. 
+            Developed approval workflow systems, IT asset management platforms, 
+            HR & payroll solutions, and automation tools using C#, SQL Server, 
+            Oracle 19c, APEX 24, Power Automate, VBA, and Power BI.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <!-- Education -->
+    <section id="education" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Education</h2>
+        <div class="row g-4">
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="edu-card card p-4 h-100">
+              <div class="d-flex align-items-center"><i class="fas fa-graduation-cap fa-2x me-3"></i>
+			  <h4>B.Sc. in Computer Science & Engineering</h4>
+      </div>
+      <p class="mb-1">East Delta University · 2019 – 2024</p>
+      <p class="text-muted">CGPA 3.75 / 4.00</p>
+      <p class="mt-2">
+        Thesis: Tomato Leaf Disease Detection using CNN Classification
+      </p>
+            </div>
+          </div>
+          <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="edu-card card p-4 h-100">
+              <div class="d-flex align-items-center"><i class="fas fa-graduation-cap fa-2x me-3"></i>
+			  <h4>Diploma in Computer Technology</h4>
+      </div>
+      <p class="mb-1">Chittagong Polytechnic Institute · 2012 – 2016</p>
+      <p class="text-muted">CGPA 3.78 / 4.00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects (card hover) -->
+    <section id="projects" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Projects</h2>
+    <div class="row g-4">
+
+      <!-- Project 1 -->
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="100">
+        <div class="project-card card h-100 p-3">
+          <div class="card-body">
+            <h4>Approval Workflow System</h4>
+            <p class="text-muted">C#, SQL Server, ASP.NET</p>
+            <p>
+              Enterprise approval management system for multi-level document approval and workflow automation.
+              Used in production for organizational decision workflows.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+              <i class="bi bi-github"></i> Code
+            </a>
+            <a href="#" class="btn btn-sm btn-primary">
+              <i class="bi bi-box-arrow-up-right"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="150">
+        <div class="project-card card h-100 p-3">
+          <div class="card-body">
+            <h4>IT Asset Management System</h4>
+            <p class="text-muted">C#, SQL Server, Crystal Reports</p>
+            <p>
+              Digital asset tracking system for IT inventory, procurement, and lifecycle management.
+              Improved asset visibility and reporting efficiency.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+              <i class="bi bi-github"></i> Code
+            </a>
+            <a href="#" class="btn btn-sm btn-primary">
+              <i class="bi bi-box-arrow-up-right"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="200">
+        <div class="project-card card h-100 p-3">
+          <div class="card-body">
+            <h4>Oracle APEX Business Application</h4>
+            <p class="text-muted">Oracle APEX 24, PL/SQL</p>
+            <p>
+              Low-code enterprise application built with Oracle APEX for workflow automation and database-driven operations.
+              Designed for scalability and business productivity.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+              <i class="bi bi-github"></i> Code
+            </a>
+            <a href="#" class="btn btn-sm btn-primary">
+              <i class="bi bi-box-arrow-up-right"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="250">
+        <div class="project-card card h-100 p-3">
+          <div class="card-body">
+            <h4>Tomato Leaf Disease Detection</h4>
+            <p class="text-muted">Python, CNN, TensorFlow</p>
+            <p>
+              Machine learning project using CNN classification to detect tomato leaf diseases.
+              Achieved accurate image-based disease identification for agricultural research.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+              <i class="bi bi-github"></i> Code
+            </a>
+            <a href="#" class="btn btn-sm btn-primary">
+              <i class="bi bi-box-arrow-up-right"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5 -->
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="300">
+        <div class="project-card card h-100 p-3">
+          <div class="card-body">
+            <h4>Automation & Reporting Dashboard</h4>
+            <p class="text-muted">Power BI, Power Automate, Excel VBA</p>
+            <p>
+              Data-driven automation and reporting solution that streamlines business insights and operational analytics.
+              Reduced manual reporting effort significantly.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+              <i class="bi bi-github"></i> Code
+            </a>
+            <a href="#" class="btn btn-sm btn-primary">
+              <i class="bi bi-box-arrow-up-right"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6 -->
+      <div class="col-md-6 col-lg-4" data-aos="flip-left" data-aos-delay="350">
+        <div class="project-card card h-100 p-3">
+          <div class="card-body">
+            <h4>School Management System</h4>
+            <p class="text-muted">ASP.NET, SQL Server</p>
+            <p>
+              Web-based system for student records, attendance, and academic management.
+              Supports digital administration and efficient record handling.
+            </p>
+            <a href="#" class="btn btn-sm btn-outline-primary me-2">
+              <i class="bi bi-github"></i> Code
+            </a>
+            <a href="#" class="btn btn-sm btn-primary">
+              <i class="bi bi-box-arrow-up-right"></i> Demo
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Certifications grid -->
+    <section id="certifications" class="section">
+  <div class="container">
+    <h2 class="section-title" data-aos="fade-up">Certifications</h2>
+    <div class="row g-4">
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="cert-card card p-3 text-center">
+          <i class="fas fa-database fa-2x mb-2"></i>
+          <h5>Oracle 19c Database & APEX 24</h5>
+          <p>Certified by Oracle Corporation (technology company)</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+        <div class="cert-card card p-3 text-center">
+          <i class="fas fa-code fa-2x mb-2"></i>
+          <h5>.NET Application Development</h5>
+          <p>Enterprise Application Development Certification</p>
+        </div>
+      </div>
+
+      <div class="col-sm-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+        <div class="cert-card card p-3 text-center">
+          <i class="fas fa-cogs fa-2x mb-2"></i>
+          <h5>Process Automation & Workflow</h5>
+          <p>Power Automate & Business Process Automation</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- Contact + Google map embed -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title" data-aos="fade-up">Contact</h2>
+        <div class="row g-5">
+          <div class="col-lg-6" data-aos="fade-right">
+            <form id="contactForm" class="contact-form p-4 rounded-4 bg-white bg-opacity-10">
+              <div class="mb-3"><input type="text" class="form-control" placeholder="Your name" required></div>
+              <div class="mb-3"><input type="email" class="form-control" placeholder="Email address" required></div>
+              <div class="mb-3"><textarea class="form-control" rows="4" placeholder="Message"></textarea></div>
+              <button type="submit" class="btn btn-primary w-100"><i class="fas fa-paper-plane me-2"></i>Send</button>
+            </form>
+            <div class="social-links-contact mt-4 text-center">
+              <a href="#" class="btn btn-outline-secondary rounded-circle mx-1"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" class="btn btn-outline-secondary rounded-circle mx-1"><i class="fab fa-github"></i></a>
+              <a href="#" class="btn btn-outline-secondary rounded-circle mx-1"><i class="fas fa-envelope"></i></a>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left">
+  <div class="map-container rounded-4 overflow-hidden">
+    <iframe 
+      src="https://www.google.com/maps?q=Bakalia,+Chittagong,+Bangladesh&output=embed"
+      width="100%" 
+      height="250" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy">
+    </iframe>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer with back to top -->
+    <footer class="footer">
+      <div class="container">
+        <div class="d-flex justify-content-between align-items-center py-4">
+          <span>© 2026 Probal Rudra · all cool</span>
+          <a href="#" id="backToTop" class="btn-top" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- AOS library -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- particles library (lightweight) -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <!-- custom js -->
+  <script src="script.js"></script>
+</body>
+</html>
